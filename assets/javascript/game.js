@@ -15,6 +15,9 @@ var correctLetter = randomLetter();
 document.onkeyup = function (event) {
 
     var letter = event.key.toLowerCase();
+
+    if (guessesSoFar.includes(letter)) return
+
     guessesSoFar.push(letter)
 
     if (letter === correctLetter) {
